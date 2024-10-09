@@ -1,0 +1,8 @@
+---
+# tasks file for test_role
+
+- name: Install Apache
+  apt:
+    name: "{{ apache_package }}"
+    state: present
+  when: ansible_os_family == "Debian"
